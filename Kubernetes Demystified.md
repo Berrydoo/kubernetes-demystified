@@ -24,7 +24,7 @@ Outline:
    1. get events
    1. exec 
    1. kubectl top pods --containers
-1. frickin awesome shortcuts
+1. frickin helpful commands
    1. kubectl api-resources
    1. kubectl explain pod --recursive | less 
    1. alias k=kubectl
@@ -40,6 +40,42 @@ Outline:
    1. no jvm memory flags - let kubernetes control the memory 
 
 
-   liveness / readiness probes 
-   namespaces
-   undestand resources - Mi, milli-cpus
+liveness / readiness probes 
+namespaces
+undestand resources - Mi, milli-cpus
+
+1. first session to do powerpoint
+2. second to do a lab 
+
+Use Docker Desktop for users to experiment 
+
+
+
+
+Lab
+
+- write a blog about sports
+create a pod that shows a web page
+
+- we need a new image 
+delete the pod 
+update the yaml file  
+apply the changes
+
+- add a new container to a pod
+add a container to log output
+look at the logs from the console
+exec into the pod to show a mounted volume
+
+- our traffic is heavy, so replace the pod with a deployment
+create a deployment
+delete a pod and watch it get rebuilt
+show rollout history
+update the image with an error and watch what happens
+use describe to see errors
+get events to see errors
+rollback the deployment
+fix the error and rollout a new version
+
+
+
