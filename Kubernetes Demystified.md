@@ -38,16 +38,11 @@ Outline:
 1. gotchas
    1. no tab characters
    1. no jvm memory flags - let kubernetes control the memory 
+1. getting help
+   1. kubernetes documentation
+   1. kubectl create --help
+   1. kubectl explain pod --recursive | less
 
-
-liveness / readiness probes 
-namespaces
-undestand resources - Mi, milli-cpus
-
-1. first session to do powerpoint
-2. second to do a lab 
-
-Use Docker Desktop for users to experiment 
 
 
 
@@ -77,5 +72,16 @@ get events to see errors
 rollback the deployment
 fix the error and rollout a new version
 
+
+Should we cover?
+- liveness / readiness probes 
+- namespaces
+- undestand resources - Mi, milli-cpus
+- volumes
+
+Game plan
+- first session to do powerpoint
+- second to do a lab 
+- Use Docker Desktop for users to experiment 
 
 
