@@ -3,13 +3,6 @@ Kubernetes Demystified
 Outline:
 1. What is it 
 1. What's in a cluster
-1. Interacting with it
-   1. kubectl ( mention kubeconfig )
-   		1. get pods, -w, --show-labels, --all-namespaces, -o 
-   		1. get svc
-   		1. get all / get pods,svc 
-   1. yaml file walkthrough ( py charm )
-   1. Lens app
 1. Resources / Resource types 
    1. kubectl api-resources 
    1. pod
@@ -17,7 +10,23 @@ Outline:
    1. service
    1. configmap
    1. secret
-   1. namespace
+1. labels
+1. resources
+1. liveness / readiness / startup probes
+1. namespaces 
+1. volumes
+1. Deployments / Services
+    1. rollouts
+    1. replicas
+    1. kubectl set image
+1. Common Pod designs
+1. Interacting with it
+   1. kubectl ( mention kubeconfig )
+        1. get pods, -w, --show-labels, --all-namespaces, -o 
+        1. describe svc
+        1. events all / get pods,svc 
+   1. yaml file walkthrough ( py charm )
+   1. Lens app   
 1. What if something goes wrong?
    1. logs
    1. describe
@@ -74,10 +83,7 @@ fix the error and rollout a new version
 
 
 Should we cover?
-- liveness / readiness probes 
-- namespaces
-- undestand resources - Mi, milli-cpus
-- volumes
+- 
 
 Game plan
 - first session to do powerpoint
