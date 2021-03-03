@@ -1,0 +1,46 @@
+
+
+alias k='kubectl'
+alias kc='kubectl create'
+alias kd='kubectl describe'
+alias kr='kubectl run --generator=run-pod/v1'
+alias ka='kubectl apply -f'
+alias ke='kubectl explain'
+alias kg='kubectl get'
+alias kgp='kubectl get pods'
+alias kgd='kubectl get deploy'
+alias kgs='kubectl get svc'
+alias kdp='kubectl describe pod'
+alias kl='kubectl logs'
+source <(kubectl completion bash)
+
+
+Switch to a cluster/context:
+$ kubectl config use-context my-cluster
+
+Display the actual/current cluster:
+$ kubectl config current-context
+
+Switch to a namespace:
+$ kubectl config set-context --current --namespace=my-ns
+
+Create Pods:
+kubectl run hello-pod --image=nginx --restart=OnFailure --dry-run -o yaml > hello-pod.yaml
+
+Expose a pod (using a service and specifying ports and service type):
+kubectl expose po hello-pod --port=80 --target-port=9376 --type=NodePort
+
+Create Deployments:
+kubectl create deploy hello-deploy --image=nginx --dry-run -o yaml > hello-deploy.yaml
+
+Update deployment image to nginx:1.17.4:
+kubectl set image deploy/hello-deploy nginx=nginx:1.17.4
+
+Scale a deployment:
+kubectl scale deploy hello-deploy --replicas=20
+
+Create Jobs:
+kubectl create job hello-job --image=busybox --dry-run -o yaml -- echo "Hello I am from job" > hello-job.yaml
+
+Rollout status
+kubectl rollout status deploy webapp
